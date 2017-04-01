@@ -1,0 +1,21 @@
+<%= simple_form_for @client do |f| %>
+  <%= f.input :name_first, label: 'First Name' %>
+  <%= f.input :name_last, label: 'Last Name' %>
+  <%= f.input :name_company, label: 'Company or Corporation' %>
+  <%= f.input :is_company, inline_label: 'Client is a third-party' %>
+
+
+  <%= f.input :phone_primary, label: "Primary Phone Number" %>
+  <%= f.input :phone_secondary, label: "Secondary Phone Number" %>
+  <%= f.input :email_address, placeholder: 'user@domain.com' %>
+
+  <%= f.input :address_street, label: 'Street Address' %>
+  <%= f.input :addr_city, label: 'City' %>
+  <%= f.input :addr_country, label: 'Country', value: 'Canada', as: :string %>
+  <%# TODO: Set default address %>
+  <%= f.input :addr_postal, label: 'Postal Code' %>
+
+  <%= f.input :notes, label: 'Notes' %>
+
+  <%= f.button :submit %>
+<% end %>
